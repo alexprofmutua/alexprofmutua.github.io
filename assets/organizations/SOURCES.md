@@ -1,6 +1,6 @@
 # Organization logo sources
 
-Official organization assets used on the About page, retrieved October 23, 2026.
+Official organization assets used on the About page.
 Logos retain their original colors and proportions.
 
 - Ubuntu Advisory Group: https://ubuntuadvisorygroup.com/favicon.svg?v=ubuntu-vector-v2
@@ -20,3 +20,6 @@ Logos retain their original colors and proportions.
 - CS50 / Harvard: https://cs50.harvard.edu/x/favicon.ico
   Converted the supplied 64px icon to PNG without changing its appearance.
   Course link: https://cs50.harvard.edu/x/
+
+- Village Market: https://villagemarket-kenya.com/mirror/wp-content/uploads/2019/08/cropped-vm-favicon-192x192.png
+- Two Rivers Mall: https://tworiversmall.com/wp-content/uploads/2023/01/cropped-logo-1-removebg-preview-192x192.png
