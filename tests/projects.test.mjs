@@ -4,11 +4,25 @@ import test from 'node:test';
 
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 
-test('MultiDock listing preserves existing projects and links to its detail route', () => {
+test('Projects are listed newest first', () => {
   const listing = read('projects/index.html');
   const ids = [...listing.matchAll(/<article class="project-window" id="([^"]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(ids, ['neatify', 'where-is-this-williams', 'colorbash', 'go-search', 'multidock']);
-  const entry = listing.slice(listing.indexOf('<article class="project-window" id="multidock"'));
+  assert.deepEqual(ids, ['ach', 'multidock', 'neatify', 'where-is-this-williams', 'colorbash', 'go-search']);
+});
+
+test('After Class Hours links to GitHub and uses its app icon as the thumbnail', () => {
+  const listing = read('projects/index.html');
+  const entry = listing.match(/<article class="project-window" id="ach"[\s\S]*?<\/article>/)?.[0] ?? '';
+  assert.ok(entry.includes('href="/projects/ach/"'));
+  assert.ok(entry.includes('href="https://github.com/alexprofmutua/ACH"'));
+  assert.ok(entry.includes('src="/assets/ach-icon.png"'));
+  const icon = readFileSync(new URL('../assets/ach-icon.png', import.meta.url));
+  assert.equal(icon.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
+});
+
+test('MultiDock listing links to its detail route', () => {
+  const listing = read('projects/index.html');
+  const entry = listing.match(/<article class="project-window" id="multidock"[\s\S]*?<\/article>/)?.[0] ?? '';
   assert.match(entry, /href="\/projects\/multidock\/"/);
   assert.match(entry, /https:\/\/github.com\/alexprofmutua\/MultiDock/);
   assert.match(entry, /Swift 6 · AppKit · SwiftUI · macOS/);
