@@ -23,3 +23,4 @@ Logos retain their original colors and proportions.
 
 - Village Market: https://villagemarket-kenya.com/mirror/wp-content/uploads/2019/08/cropped-vm-favicon-192x192.png
 - Two Rivers Mall: https://tworiversmall.com/wp-content/uploads/2023/01/cropped-logo-1-removebg-preview-192x192.png
+- Kapsabet Boys High School: https://kapsabethighschool.sc.ke/wp-content/uploads/2023/05/cropped-logo-1-192x192.jpg
