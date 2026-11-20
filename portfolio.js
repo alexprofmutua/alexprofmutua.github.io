@@ -4,7 +4,7 @@ const history = document.querySelector('#terminal-history');
 const responses = {
   whoami: 'Alex Mutua\nComputer science student at Williams.',
   ls: 'about.txt   projects/   chess/\nwriting/   contact.txt   CV.pdf',
-  'cat about.txt': 'I enjoy learning and turning\nrandom ideas into working projects.',
+  'cat about.txt': "Hola. I enjoy exploring new ideas, and taking on challenges. I'm curious about a lot of things, and I like seeing where that curiosity takes me.",
   'ls projects': 'neatify/   colorBash/   where-is-this-williams/   go_search/',
   pwd: '/home/alex/portfolio',
   help: 'whoami · ls · ls projects · cat about.txt · pwd · clear',
