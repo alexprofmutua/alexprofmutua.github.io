@@ -7,7 +7,7 @@ function setTheme(dark) {
   themeButton.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   themeButton.querySelector('span').textContent = dark ? '☼' : '☾';
 }
-setTheme(savedTheme === 'dark');
+setTheme(savedTheme !== 'light');
 themeButton.addEventListener('click', () => {
   const dark = document.documentElement.dataset.theme !== 'dark';
   setTheme(dark);

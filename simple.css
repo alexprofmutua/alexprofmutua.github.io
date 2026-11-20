@@ -1,0 +1,83 @@
+/* Quiet, list-based pages using the existing navigation and content. */
+html[data-theme='dark'] {
+  --paper: #0b0b0b;
+  --ink: #e8e8e6;
+  --body: #bdbfba;
+  --green: #9dc79f;
+  --line: #272a27;
+  --tag: #191d19;
+}
+:root { --serif: var(--mono); }
+body { font-size: 14px; }
+h1, h2, h3 { font-family: var(--mono); font-weight: 500; }
+.page-main, .project-detail { padding-top: 40px; }
+.page-title, .page-hero h1, .project-detail h1, .projects-heading h1 { font-size: 28px; line-height: 1.4; }
+.about-page h2, .project-detail section h2, .writing-page .currently-exploring h2,
+.writing-page .writing-archive > h2, .article-page .article-body h2,
+.replay-heading h2, .section h2 { font-size: 20px; line-height: 1.5; }
+.about-page .page-hero, .chess-page .page-hero { display: block; margin-bottom: 28px; }
+.about-page .profile-media { display: none; }
+.about-page .page-intro { font-size: 14px; margin-top: 16px; }
+.about-page .about-section { margin-top: 28px; padding-top: 22px; }
+.about-page .about-entry { display: block; padding-block: 18px; }
+.about-page .entry-copy { margin-top: 8px; max-width: 75ch; }
+.about-page .cert-grid { display: block; }
+.about-page .about-cert { padding-block: 18px; border-bottom: 1px solid var(--line); }
+.about-page .about-cert + .about-cert { border-top: 0; }
+.about-page .about-entry h3, .about-page .about-cert h3 { font-size: 14px; }
+.layout-home .hero { min-height: 0; }
+.layout-home .hero-inner { display: block; padding-block: 48px 28px; }
+.layout-home .hero h1 { font-size: 36px; white-space: normal; }
+.hero-links { margin-top: 20px; }
+.primary-link, html[data-theme='dark'] .primary-link {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--tag);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.home-terminal { margin-top: 24px; max-width: 640px; }
+.home-terminal > summary { width: fit-content; cursor: pointer; color: var(--green); padding-block: 8px; }
+.home-terminal > summary:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+.home-terminal .terminal { margin-top: 10px; box-shadow: none; }
+.section { padding-block: 26px; }
+.section-heading { align-items: baseline; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 12px; }
+.section-label { font-size: 12px; }
+.home-featured .project-list { display: block; }
+.home-featured .project { padding: 16px 0; border: 0; }
+.home-featured .project + .project { border-top: 1px solid var(--line); }
+.home-featured .project-image { display: none; }
+.home-featured .project h3 { margin: 0 0 8px; font-size: 16px; }
+.home-featured .project p { margin: 0; }
+.home-featured .tags li { background: transparent; padding: 0; }
+.project-windows { display: block; }
+.project-window { border: 0; border-radius: 0; background: transparent; overflow: visible; }
+.project-window + .project-window { border-top: 1px solid var(--line); }
+.project-window .window-bar, .project-window .window-preview { display: none; }
+.project-window .window-content { display: block; padding: 22px 0; }
+.project-window .window-copy { gap: 5px; }
+.project-window .window-copy h2 { font-size: 19px; line-height: 1.5; }
+.project-window .project-summary { margin-top: 10px; color: var(--body); }
+.project-window .window-footer { margin-top: 10px; gap: 8px; }
+.project-window .project-kind { color: var(--body); }
+.project-technologies { font-size: 12px; }
+.detail-screenshot { max-width: 900px; }
+.project-detail .detail-summary { font-size: 15px; }
+.detail-github { margin-bottom: 20px; }
+.project-detail section h3 { font-size: 15px; }
+.writing-page .currently-exploring ul { grid-template-columns: 1fr; }
+.writing-page .writing-entry h3, .writing-page .writing-entry--featured h3 { font-size: 20px; }
+.writing-page .page-lead, .article-page .article-description { font-size: 14px; }
+.article-page .article-header h1 { font-size: 28px; }
+.chess-page .chess-quote { margin-block: 20px; font-size: 14px; max-width: 70ch; }
+.site-header.wrap { box-shadow: none; }
+.site-footer { font-size: 12px; }
+@media (min-width: 1101px) {
+  html[data-theme='dark'] .site-header.wrap { background: #070707; }
+  .layout-home .hero-inner { padding-top: 48px; }
+}
+@media (max-width: 640px) {
+  .page-main, .project-detail { padding-top: 24px; }
+  .layout-home .hero-inner { padding-top: 28px; }
+  .layout-home .hero h1 { font-size: 29px; }
+}
