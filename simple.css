@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bitcount Prop Single';
+  src: url('/assets/fonts/bitcount-prop-single-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 /* Quiet, list-based pages using the existing navigation and content. */
 html[data-theme='dark'] {
   --paper: #0b0b0b;
@@ -7,10 +14,10 @@ html[data-theme='dark'] {
   --line: #272a27;
   --tag: #191d19;
 }
-:root { --serif: var(--mono); }
+:root { --heading: 'Bitcount Prop Single', var(--mono); --serif: var(--heading); }
 body { font-size: 14px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
-h1, h2, h3 { font-family: var(--mono); font-weight: 500; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--heading); font-weight: 400; }
 .page-main, .project-detail { padding-top: 40px; }
 .page-title, .page-hero h1, .project-detail h1, .projects-heading h1 { font-size: 28px; line-height: 1.4; }
 .about-page h2, .project-detail section h2, .writing-page .currently-exploring h2,
@@ -103,3 +110,5 @@ h1, h2, h3 { font-family: var(--mono); font-weight: 500; }
   .layout-home .hero-inner { padding-top: 28px; }
   .layout-home .hero h1 { font-size: 29px; }
 }
+
+.chess-page .game-group h4, .projects-page .card-kicker, .projects-page .stack-row h3, .writing-page .writing-entry h3 { font-family: var(--heading); font-weight: 400; }

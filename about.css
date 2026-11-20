@@ -1,7 +1,7 @@
 /* Compact lists on the About page. */
 .about-page { overflow-wrap: anywhere; }
 .about-page .skills-section { padding: 0; border: 0; }
-.about-page h2 { font: 500 18px/1.5 var(--mono); color: var(--ink); margin: 0 0 10px; }
+.about-page h2 { font: 400 20px/1.5 var(--heading); color: var(--ink); margin: 0 0 10px; }
 .about-page .skill-groups { margin: 0; }
 .about-page .skill-groups > div {
   display: flex;
