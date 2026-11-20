@@ -1,10 +1,10 @@
 /* About-only refinements; shared page styles remain unchanged. */
-.about-page .entry-heading--organization { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; }
-.about-page .organization-logo { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; }
-.about-page .organization-logo img { display: block; width: 48px; height: 48px; object-fit: contain; }
+.about-page .entry-heading--organization { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: start; }
+.about-page .organization-logo { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; }
+.about-page .organization-logo img { display: block; width: 40px; height: 40px; object-fit: contain; }
 .about-page .chess-award-venue { background: #fff; }
-.about-page .chess-award-venue img { width: 40px; height: 40px; }
-.about-page .chess-award-icon { background: var(--tag); border: 1px solid var(--line); color: var(--green); font: 28px/1 Georgia, serif; }
+.about-page .chess-award-venue img { width: 34px; height: 34px; }
+.about-page .chess-award-icon { background: var(--tag); border: 1px solid var(--line); color: var(--green); font: 24px/1 Georgia, serif; }
 .about-page .organization-logo[hidden] { display: none; }
 .about-page .organization-logo-unavailable { grid-template-columns: minmax(0, 1fr); }
 .about-page .entry-meta a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
