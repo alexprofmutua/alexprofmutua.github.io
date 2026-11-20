@@ -184,3 +184,14 @@ h1, h2, h3, h4, h5, h6,
 .chess-page .game-group h4 { color: var(--heading-color); }
 h1 a, h2 a, h3 a,
 .writing-page .writing-entry h3 a { color: inherit; }
+
+/* Blue text links stay distinct from the lime headings. */
+:root { --link-color: #075985; }
+html[data-theme='dark'] { --link-color: #7dd3fc; }
+main a:any-link:not(.primary-link):not(.send-email),
+.site-footer div a:any-link { color: var(--link-color); }
+main a:any-link:hover, main a:any-link:focus-visible,
+.site-footer div a:any-link:hover, .site-footer div a:any-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
