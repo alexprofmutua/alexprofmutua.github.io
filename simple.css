@@ -24,37 +24,6 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--heading); font-weight: 400; }
 .writing-page .writing-archive > h2, .article-page .article-body h2,
 .replay-heading h2, .section h2 { font-size: 20px; line-height: 1.5; }
 .about-page .page-hero, .chess-page .page-hero { display: block; margin-bottom: 28px; }
-.about-page .profile-media { display: none; }
-.about-page .page-intro { font-size: 14px; margin-top: 16px; }
-.about-page .about-section { margin-top: 28px; padding-top: 22px; }
-.about-page .about-entry { display: block; padding-block: 18px; }
-.about-page .entry-copy { margin-top: 8px; max-width: 75ch; }
-.about-page .cert-grid { display: block; }
-.about-page .about-cert { padding-block: 18px; border-bottom: 1px solid var(--line); }
-.about-page .about-cert + .about-cert { border-top: 0; }
-.about-page .about-entry h3, .about-page .about-cert h3 { font-size: 14px; }
-
-.about-page .profile-quick-lines { display: block; padding-block: 0 18px; }
-.about-page .profile-quick-lines p { display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: baseline; }
-.about-page .profile-quick-lines strong { font-size: 13px; font-weight: 500; color: var(--green); }
-.about-page .profile-quick-lines span { color: var(--body); font-size: 13px; }
-.about-page .skills-section { padding-top: 10px; }
-.about-page .skill-groups > div { grid-template-columns: 200px minmax(0, 1fr); gap: 8px 20px; }
-.about-page .entry-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
-.about-page .entry-heading--organization { display: grid; grid-template-columns: 40px minmax(0, 1fr); align-items: center; gap: 12px; }
-.about-page .entry-heading--organization > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; min-width: 0; }
-.about-page .entry-meta { margin: 0; }
-.about-page .entry-heading--organization + .entry-copy,
-.about-page .about-cert:has(.organization-logo:not([hidden])) > p,
-.about-page .about-cert:has(.organization-logo:not([hidden])) > .cert-link { margin-left: 52px; }
-.about-page .entry-heading.organization-logo-unavailable { grid-template-columns: minmax(0, 1fr); }
-.about-page .entry-heading.organization-logo-unavailable + .entry-copy { margin-left: 0; }
-.about-page .education-activities span { color: var(--green); margin-right: 10px; }
-@media (max-width: 640px) {
-  .about-page .skill-groups > div { grid-template-columns: 1fr; gap: 4px; }
-  .about-page .entry-heading--organization > div { gap: 2px 12px; }
-}
-
 .layout-home .hero { min-height: 0; }
 .layout-home .hero-inner { display: block; padding-block: 48px 28px; }
 .layout-home .hero h1 { font-size: 36px; white-space: normal; }
@@ -112,3 +81,90 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--heading); font-weight: 400; }
 }
 
 .chess-page .game-group h4, .projects-page .card-kicker, .projects-page .stack-row h3, .writing-page .writing-entry h3 { font-family: var(--heading); font-weight: 400; }
+
+/* Compact rows throughout the portfolio. */
+.page-main h1, .project-detail h1, .projects-heading h1,
+.chess-page .page-hero h1, .article-page .article-header h1 { font-size: 28px; }
+.projects-page .stack-row { display: flex; flex-wrap: wrap; gap: 4px 14px; padding-block: 5px; border: 0; }
+.projects-page .stack-row h3 { font-size: 15px; }
+.projects-page .stack-icon-list, .projects-page .stack-text-list { font-size: 13px; gap: 4px 12px; }
+.projects-page .stack-panel { margin-bottom: 24px; }
+.projects-heading { margin-bottom: 8px; }
+.project-window + .project-window { border: 0; }
+.project-window .window-content { padding-block: 8px; font-size: 13px; line-height: 1.8; }
+.project-window .window-copy, .project-window .window-copy h2,
+.project-window .project-summary, .project-window .window-footer,
+.project-window .project-technologies, .project-window .project-actions { display: inline; margin: 0; }
+.project-window .window-copy h2 { font-size: 18px; }
+.project-window .project-kind { display: none; }
+.project-window .project-summary::before,
+.project-window .window-footer::before,
+.project-window .project-actions::before { content: ' · '; color: var(--green); }
+.project-window .project-summary { max-width: none; font-size: 13px; line-height: inherit; }
+.project-window .project-technologies, .project-window .project-actions { font-size: 12px; }
+.project-window .project-actions a + a { margin-left: 12px; }
+.project-window .window-copy h2 { margin-right: 4px; }
+.project-detail > p { margin-top: 8px; font-size: 13px; }
+.project-detail .detail-summary { font-size: 14px; }
+.project-detail .back-link { margin-bottom: 18px; }
+.project-detail .detail-github { margin-block: 10px 16px; font-size: 13px; }
+.project-detail section { border: 0; padding-block: 12px; }
+.project-detail section h2 { font-size: 20px; margin-bottom: 8px; }
+.project-detail section h3 { font-size: 17px; margin-block: 12px 5px; }
+.project-detail section p, .project-detail section li { font-size: 13px; line-height: 1.8; }
+.project-detail section p + p { margin-top: 6px; }
+.project-detail section li + li { margin-top: 3px; }
+.project-detail .detail-stack > div, .project-detail .source-files div { display: flex; flex-wrap: wrap; gap: 4px 12px; padding-block: 3px; margin-bottom: 0; }
+.project-detail .source-files { margin-top: 10px; }
+.project-detail .detail-screenshot { display: inline-block; vertical-align: top; width: min(100%, 280px); margin: 8px 16px 8px 0; }
+.project-detail .detail-screenshot img { border: 0; border-radius: 0; }
+.project-detail .detail-screenshot figcaption { font-size: 11px; margin-top: 5px; }
+.writing-page .writing-header .page-lead { margin-top: 10px; font-size: 13px; }
+.writing-page .writing-archive { margin-top: 20px; }
+.writing-page .writing-empty { border: 0; padding-block: 8px; }
+.writing-page .currently-exploring, .writing-page .featured-writing { margin-top: 20px; }
+.writing-page .currently-exploring > header { justify-content: flex-start; gap: 12px; margin-bottom: 5px; }
+.writing-page .currently-exploring li { display: block; padding-block: 5px; border: 0; }
+.writing-page .exploring-status::before { content: ' · '; }
+.writing-page .writing-entry { padding-block: 8px; border: 0; }
+.writing-page .writing-entry h3, .writing-page .writing-entry--featured h3 { display: inline; font-size: 19px; margin: 0; }
+.writing-page .writing-description { display: inline; font-size: 13px; margin: 0; }
+.writing-page .writing-description::before { content: ' · '; color: var(--green); }
+.writing-page .article-byline { display: block; font-size: 11px; }
+.article-page .article-back { margin-bottom: 16px; }
+.article-page .article-description, .article-page .article-author { margin-top: 8px; }
+.article-page .article-body { margin-top: 22px; font-size: 14px; line-height: 1.8; }
+.article-page .article-body > * + * { margin-top: 12px; }
+.article-page .article-body h2 { margin-top: 22px; font-size: 20px; }
+.article-page .article-body h3 { margin-top: 18px; font-size: 18px; }
+.article-page .article-footer { border: 0; margin-top: 22px; padding-top: 0; }
+.contact-page .page-lead { margin-top: 10px; font-size: 13px; }
+.contact-page .contact-links { margin-top: 20px; }
+.contact-page .contact-links > div, .contact-page .contact-links > .contact-email {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding-block: 6px; border: 0;
+}
+.contact-page .contact-links dt { padding: 0; font-size: 13px; }
+.contact-page .contact-links dd { flex: 1; min-width: 0; font-size: 13px; }
+.contact-page .email-address { font-size: 13px; }
+.contact-page .email-actions { display: inline-flex; gap: 8px; margin: 0 0 0 10px; }
+.contact-page .send-email, .contact-page .copy-email { min-height: 36px; padding: 4px 8px; font-size: 12px; }
+.contact-page .copy-email-status { min-height: 0; margin: 2px 0 0; }
+.contact-page .contact-icon { width: 16px; height: 16px; }
+.chess-page .page-hero { margin-bottom: 20px; }
+.chess-page .chess-quote { font-size: 14px; line-height: 1.8; }
+.chess-page .chess-quote p { font-size: inherit; line-height: inherit; }
+.chess-page .replay-section { border: 0; padding-top: 12px; }
+.chess-page .replay-heading { margin-bottom: 10px; }
+.chess-page .replay-heading h2, .chess-page .game-list-panel > h3 { font-size: 20px; }
+.chess-page .replay-sidebar { border: 0; padding-left: 18px; padding-top: 0; }
+.chess-page .replay-details { border: 0; padding-top: 10px; }
+.chess-page .game-list { padding: 0; }
+.chess-page .game-list-item { display: block; padding: 6px 8px; border: 0; }
+.chess-page .game-list-title, .chess-page .game-list-event, .chess-page .game-list-opening { display: inline; }
+.chess-page .game-list-event::before, .chess-page .game-list-opening::before { content: ' · '; }
+.site-footer { border: 0; padding-top: 20px; }
+@media (max-width: 640px) {
+  .contact-page .contact-links dd { flex-basis: 100%; }
+  .contact-page .email-actions { margin-left: 0; margin-top: 5px; display: flex; }
+  .chess-page .replay-sidebar { padding-left: 0; }
+}
