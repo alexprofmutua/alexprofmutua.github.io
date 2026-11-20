@@ -36,8 +36,8 @@ h1, h2, h3 { font-family: var(--mono); font-weight: 500; }
   border-color: var(--line);
   color: var(--ink);
 }
-.home-terminal { margin-top: 24px; max-width: 640px; }
-.home-terminal .terminal { margin-top: 10px; box-shadow: none; }
+.home-terminal { margin-top: 24px; max-width: 720px; }
+.home-terminal .terminal { margin-top: 10px; box-shadow: none; font-size: 14px; }
 .section { padding-block: 26px; }
 .section-heading { align-items: baseline; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 12px; }
 .section-label { font-size: 12px; }
