@@ -168,3 +168,19 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--heading); font-weight: 400; }
   .contact-page .email-actions { margin-left: 0; margin-top: 5px; display: flex; }
   .chess-page .replay-sidebar { padding-left: 0; }
 }
+
+/* Lime accents for the pixel headings. */
+:root { --heading-color: #476b00; }
+html[data-theme='dark'] { --heading-color: #b6ff45; }
+h1, h2, h3, h4, h5, h6,
+.projects-page .card-kicker,
+.projects-page .stack-row h3,
+.writing-page .writing-entry h3,
+.article-page .article-body h2,
+.article-page .article-body h3,
+.article-page .article-body h4,
+.article-page .article-body h5,
+.article-page .article-body h6,
+.chess-page .game-group h4 { color: var(--heading-color); }
+h1 a, h2 a, h3 a,
+.writing-page .writing-entry h3 a { color: inherit; }
