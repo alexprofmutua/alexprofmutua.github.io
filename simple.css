@@ -240,3 +240,6 @@ body { font-family: var(--text-font); font-size: 18px; }
   .projects-page .stack-row { grid-template-columns: 1fr; gap: 4px; }
   .projects-page .project-window .project-actions { display: block; }
 }
+
+.site-header nav a,
+.site-header nav a[aria-current='page'] { color: var(--heading-color); }
