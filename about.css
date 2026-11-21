@@ -47,3 +47,24 @@
 .about-page .education-activities { margin: 2px 0 0; color: var(--body); }
 .about-page .education-activities > span { color: var(--green); margin-right: 8px; }
 .about-page a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
+/* Keep each entry together within a comfortable reading width. */
+.about-page { max-width: 940px; }
+.about-page .skill-groups > div {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr);
+  gap: 6px 18px;
+  padding-block: 6px;
+}
+.about-page .skill-groups dt, .about-page .skill-groups dd { font-size: 17px; line-height: 1.55; }
+.about-page .about-section { margin-top: 32px; }
+.about-page .about-item { padding-block: 10px; font-size: 18px; line-height: 1.55; gap: 12px; }
+.about-page .about-item-content { max-width: 72ch; }
+.about-page .about-item .about-item-title { display: block; margin-bottom: 3px; font-weight: 700; }
+.about-page .about-item-description { margin: 0; color: var(--body); }
+.about-page .education-activities { margin-top: 6px; }
+@media (max-width: 640px) {
+  .about-page .skill-groups > div { grid-template-columns: 1fr; gap: 2px; }
+}
+
+.about-page .about-item .cert-link { font-size: inherit; margin-top: 0; }
