@@ -97,3 +97,15 @@
 @media (max-width: 640px) {
   .about-page .experience-role-heading { flex-direction: column; gap: 2px; }
 }
+
+/* Frame the supplied logo's pin beside the linked company name. */
+.about-page .hellomapper-logo { position: relative; overflow: hidden; }
+.about-page .hellomapper-logo img {
+  position: absolute;
+  width: 100px;
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
