@@ -49,7 +49,7 @@
 .about-page a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
 
 /* Keep each entry together within a comfortable reading width. */
-.about-page { max-width: 1120px; }
+.about-page { --container-max: 1480px; max-width: none; }
 .about-page .skill-groups > div {
   display: grid;
   grid-template-columns: 175px minmax(0, 1fr);
@@ -59,7 +59,7 @@
 .about-page .skill-groups dt, .about-page .skill-groups dd { font-size: 17px; line-height: 1.55; }
 .about-page .about-section { margin-top: 44px; }
 .about-page .about-item { padding-block: 16px; font-size: 18px; line-height: 1.65; gap: 16px; }
-.about-page .about-item-content { max-width: 84ch; }
+.about-page .about-item-content { max-width: none; }
 .about-page .about-item .about-item-title { display: block; margin-bottom: 6px; font-weight: 700; }
 .about-page .about-item-description { margin: 0; color: var(--body); }
 .about-page .education-activities { margin-top: 10px; }
@@ -80,4 +80,20 @@
   color: var(--body);
   font-size: 16px;
   line-height: 1.5;
+}
+
+/* A company appears once, with its roles directly beneath it. */
+.about-page .experience-role + .experience-role { margin-top: 18px; }
+.about-page .experience-role-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 24px;
+  margin-bottom: 6px;
+}
+.about-page .experience-role-heading .experience-role-title { font-weight: 700; }
+.about-page .experience-role-heading .experience-dates { margin: 0; }
+@media (max-width: 640px) {
+  .about-page .experience-role-heading { flex-direction: column; gap: 2px; }
 }

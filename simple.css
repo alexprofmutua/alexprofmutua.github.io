@@ -205,7 +205,7 @@ body { font-family: var(--text-font); font-size: 18px; }
 .site-header nav a, .navigation-toggle, .primary-link { font-size: 17px; }
 .site-footer { font-size: 16px; }
 .home-terminal .terminal { font-size: 17px; }
-.projects-page .page-shell { max-width: 940px; }
+.projects-page .page-shell { max-width: none; }
 .projects-page .stack-row {
   display: grid;
   grid-template-columns: 175px minmax(0, 1fr);
