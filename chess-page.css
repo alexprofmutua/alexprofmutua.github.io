@@ -53,7 +53,24 @@
 .chess-page .game-group h4 { font: 500 11px/1.5 var(--mono); color: var(--green); margin: 10px 0 5px; }
 .chess-page .game-group:first-child h4 { margin-top: 0; }
 .chess-page .game-list-item { padding: 10px 10px 10px 12px; gap: 3px; border-bottom: 0; border-left-width: 2px; transition: background-color .15s; overflow-wrap: anywhere; }
-.chess-page .game-list-item.is-active { background: var(--tag); border-left-color: var(--green); }
+/* Keep the selected recording easy to find while browsing the library. */
+.chess-page .game-list-item:hover,
+.chess-page .game-list-item:focus-visible {
+  background: color-mix(in srgb, var(--heading-color) 14%, var(--paper));
+  box-shadow: inset 3px 0 var(--heading-color);
+}
+.chess-page .game-list-item:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 2px;
+}
+.chess-page .game-list-item.is-active {
+  background: #b6ff45;
+  color: #15201d;
+  box-shadow: inset 3px 0 #476b00;
+}
+.chess-page .game-list-item.is-active .game-list-title,
+.chess-page .game-list-item.is-active .game-list-event,
+.chess-page .game-list-item.is-active .game-list-opening { color: inherit; }
 .chess-page .game-list-title { font-size: 13px; line-height: 1.6; }
 .chess-page .game-list-event, .chess-page .game-list-opening { color: var(--body); font-size: 11px; line-height: 1.6; }
 .chess-page .game-list-opening { color: var(--green); }
