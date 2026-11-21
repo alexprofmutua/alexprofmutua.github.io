@@ -68,3 +68,16 @@
 }
 
 .about-page .about-item .cert-link { font-size: inherit; margin-top: 0; }
+
+.about-page .experience-list .about-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  padding-block: 12px;
+}
+.about-page .experience-list .about-item-content { grid-column: 2; }
+.about-page .experience-dates {
+  margin: 0 0 5px;
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.5;
+}
