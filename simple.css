@@ -254,3 +254,63 @@ body { font-family: var(--text-font); font-size: 16px; }
 .writing-page .exploring-status,
 .writing-page .article-byline { font-size: 14px; }
 .writing-page .currently-exploring li { padding-block: 8px; }
+
+/* Let content set the page height and keep related information together. */
+body > main, body > .page-shell { flex: 0 1 auto; }
+.page-main, .project-detail { padding-bottom: 24px; }
+.writing-page, .contact-page { min-height: 0; }
+.site-footer { margin-top: 24px; padding-block: 12px 24px; }
+.layout-home .hero-inner { padding-block: 28px 20px; }
+.layout-home .hero-links { margin-top: 12px; }
+.layout-home .home-terminal { margin-top: 20px; }
+.projects-page .page-shell { margin-block: 28px 24px; }
+.projects-page .project-window .window-content { padding-block: 10px; }
+.project-detail .detail-summary { max-width: none; }
+.project-detail section { min-width: 0; }
+.project-detail .detail-stack > div,
+.project-detail .source-files div {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 4px 16px;
+}
+.writing-page .writing-entry h3,
+.writing-page .writing-entry--featured h3 { display: block; margin-bottom: 4px; }
+.writing-page .writing-description { display: block; }
+.writing-page .writing-description::before { content: none; }
+.writing-page .article-byline { margin-top: 4px; }
+.contact-page .contact-links > div,
+.contact-page .contact-links > .contact-email {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 6px 16px;
+  padding-block: 10px;
+}
+.contact-page .email-actions { display: flex; margin: 8px 0 0; }
+.chess-page .replay-layout { gap: 24px; }
+@media (min-width: 1101px) {
+  .projects-page .project-windows {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 36px;
+    align-items: start;
+  }
+  .project-detail {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 32px;
+    align-items: start;
+  }
+  .project-detail > :not(section),
+  .project-detail > section[aria-labelledby='screenshots-heading'] { grid-column: 1 / -1; }
+  .writing-page .currently-exploring ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 32px;
+  }
+  .chess-page .game-list { max-height: 560px; overflow-y: auto; }
+}
+@media (max-width: 640px) {
+  .project-detail .detail-stack > div,
+  .project-detail .source-files div,
+  .contact-page .contact-links > div,
+  .contact-page .contact-links > .contact-email { grid-template-columns: 1fr; }
+}
