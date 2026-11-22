@@ -56,9 +56,9 @@
   gap: 6px 18px;
   padding-block: 9px;
 }
-.about-page .skill-groups dt, .about-page .skill-groups dd { font-size: 17px; line-height: 1.55; }
+.about-page .skill-groups dt, .about-page .skill-groups dd { font-size: 16px; line-height: 1.55; }
 .about-page .about-section { margin-top: 44px; }
-.about-page .about-item { padding-block: 16px; font-size: 18px; line-height: 1.65; gap: 16px; }
+.about-page .about-item { padding-block: 16px; font-size: 16px; line-height: 1.65; gap: 16px; }
 .about-page .about-item-content { max-width: none; }
 .about-page .about-item .about-item-title { display: block; margin-bottom: 6px; font-weight: 700; }
 .about-page .about-item-description { margin: 0; color: var(--body); }
@@ -78,7 +78,7 @@
 .about-page .experience-dates {
   margin: 0 0 8px;
   color: var(--body);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
