@@ -259,7 +259,8 @@ body { font-family: var(--text-font); font-size: 16px; }
 body > main, body > .page-shell { flex: 0 1 auto; }
 .page-main, .project-detail { padding-bottom: 24px; }
 .writing-page, .contact-page { min-height: 0; }
-.site-footer { margin-top: 24px; padding-block: 12px 24px; }
+body { min-height: 100dvh; }
+.site-footer { margin-top: auto; padding-block: 24px; flex-shrink: 0; }
 .layout-home .hero-inner { padding-block: 28px 20px; }
 .layout-home .hero-links { margin-top: 12px; }
 .layout-home .home-terminal { margin-top: 20px; }
