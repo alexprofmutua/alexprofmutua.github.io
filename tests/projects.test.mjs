@@ -7,7 +7,7 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf
 test('Projects are listed newest first', () => {
   const listing = read('projects/index.html');
   const ids = [...listing.matchAll(/<article class="project-window" id="([^"]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(ids, ['ach', 'multidock', 'neatify', 'where-is-this-williams', 'colorbash', 'go-search']);
+  assert.deepEqual(ids, ['control-center', 'ach', 'multidock', 'neatify', 'where-is-this-williams', 'colorbash', 'go-search']);
 });
 
 test('After Class Hours links to GitHub and uses its app icon as the thumbnail', () => {

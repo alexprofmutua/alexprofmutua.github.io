@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control Center · Alex Mutua</title>
+  <meta name="description" content="Control Center is a personal bookmark hub with category navigation and browser-stored link click counts.">
+  <link rel="stylesheet" href="/portfolio.css?v=20261120-sidebar">
+  <link rel="stylesheet" href="/site-pages.css?v=20261023-layout">
+  <link rel="stylesheet" href="/projects.css?v=20261023-layout">
+  <script src="/site-theme.js?v=20261120" defer></script>
+  <script src="/site-navigation.js" defer></script>
+  <link rel="stylesheet" href="/simple.css?v=20261121-footer-bottom">
+</head>
+<body class="projects-page layout-project-detail">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="wordmark" href="/">alexmutua<span>_</span></a>
+  <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
+  <nav id="site-navigation" aria-label="Main navigation">
+    <a href="/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>home</span></a>
+    <a href="/about/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span>about</span></a>
+    <a href="/projects/" aria-current="page"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-17-2 20"/></svg><span>projects</span></a>
+    <a href="/chess/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21h14M6 17h12v4H6Zm1 0 2-6-4 1V8l7-6 5 4 1 11M12 7h.01"/></svg><span>chess</span></a>
+    <a href="/writing/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 4 5 5M4 20l4-1L21 6a2 2 0 0 0-5-3L3 16l-1 6Z"/></svg><span>writing</span></a>
+    <a href="/contact/"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 5 10 8L22 5"/></svg><span>contact</span></a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme"><span aria-hidden="true">☾</span></button>
+</header>
+<main class="project-detail wrap" id="main">
+  <a class="back-link" href="/projects/#control-center">← All projects</a>
+  <p class="section-label">Web app / personal bookmark hub</p>
+  <h1>Control Center</h1>
+  <p class="detail-summary">The links I use, organized in one place.</p>
+  <p class="project-technologies">HTML · CSS · JavaScript · localStorage · Lucide icons</p>
+  <a class="detail-github" href="https://github.com/alexprofmutua/control-center" target="_blank" rel="noopener noreferrer">View Control Center on GitHub ↗<span class="sr-only"> (opens in a new tab)</span></a>
+
+  <section aria-labelledby="screenshots-heading">
+    <h2 id="screenshots-heading">Screenshots</h2>
+    <figure class="detail-screenshot">
+      <a href="/assets/control-center-home.png" aria-label="View full-size home screenshot"><img src="/assets/control-center-home.png" alt="Control Center home with a category sidebar and welcome message" width="3600" height="2022" loading="lazy"></a>
+      <figcaption>Home page with links to each category.</figcaption>
+    </figure>
+    <figure class="detail-screenshot">
+      <a href="/assets/control-center-code-land.png" aria-label="View full-size code land screenshot"><img src="/assets/control-center-code-land.png" alt="Code Land with programming resources and API links beside the category sidebar" width="3600" height="2016" loading="lazy"></a>
+      <figcaption>Code Land groups coding resources and API links.</figcaption>
+    </figure>
+    <figure class="detail-screenshot">
+      <a href="/assets/control-center-stream-land.png" aria-label="View full-size stream land screenshot"><img src="/assets/control-center-stream-land.png" alt="Stream Land with streaming and music bookmarks in a simple list" width="3600" height="2020" loading="lazy"></a>
+      <figcaption>Stream Land keeps streaming and music bookmarks together.</figcaption>
+    </figure>
+  </section>
+  <section aria-labelledby="overview-heading">
+    <h2 id="overview-heading">A home for everyday links</h2>
+    <p>I built Control Center to keep frequently used links in one place. The sidebar separates coding resources, games, finance, Williams College links, reading, and entertainment into their own pages.</p>
+    <p>Each page uses a simple list of bookmarks. Links open in a new tab, so the hub stays available while I browse.</p>
+  </section>
+  <section aria-labelledby="implementation-heading">
+    <h2 id="implementation-heading">How it works</h2>
+    <p>Static HTML pages share a CSS layout with a fixed sidebar and Lucide icons. JavaScript sorts bookmark lists alphabetically and counts how often each link is opened, including middle-clicks.</p>
+    <p>Click counts are saved in the browser with localStorage. If browser storage is unavailable, the counter continues working for the current page.</p>
+  </section>
+  <section aria-labelledby="run-heading">
+    <h2 id="run-heading">Run locally</h2>
+    <p>Download or clone the <a href="https://github.com/alexprofmutua/control-center" target="_blank" rel="noopener noreferrer">repository</a> and open <code>index.html</code> in a browser. No build step or database is required. The icons load from a CDN.</p>
+  </section>
+</main>
+<footer class="site-footer wrap"><a href="/">alexmutua<span>_</span></a><div><a href="/chess/">Chess</a><a href="https://github.com/alexprofmutua" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="/contact/">Say hello →</a></div></footer>
+</body>
+</html>
